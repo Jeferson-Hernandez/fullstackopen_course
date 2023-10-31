@@ -1,0 +1,17 @@
+GET http://localhost:3003/api/blogs
+
+###
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFydG8gaGVsbGFzIiwiaWQiOiI2NTM4NDhjMGMzODAxNzQyNGQyZTZlN2UiLCJpYXQiOjE2OTgyMDA1MDIsImV4cCI6MTY5ODIwNDEwMn0.0CghtaJryQn2Of9oPt2O-fwm9NAory3K4FXhHHVw21g
+
+{
+    "author": "Arto Allen",
+    "title": "Nuevo post sobre arto",
+    "url": "ulr.arto",
+    "likes": 43
+}
+
+###
+DELETE http://localhost:3003/api/blogs/65386f9b677c672d30f81a06
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFydG8gaGVsbGFzIiwiaWQiOiI2NTM4NDhjMGMzODAxNzQyNGQyZTZlN2UiLCJpYXQiOjE2OTgyMDA1MDIsImV4cCI6MTY5ODIwNDEwMn0.0CghtaJryQn2Of9oPt2O-fwm9NAory3K4FXhHHVw21g
