@@ -19,13 +19,13 @@ const AnecdoteForm = () => {
     event.preventDefault()
     const content = event.target.anecdote.value
     event.target.anecdote.value = ''
-    // if (content.length < 5) {
-    //   notificationDispatch({ type: 'MESSAGE', payload: 'La anecdota debe tener al menos 5 caracteres de longitud' })
-    //   setTimeout(() => {
-    //     notificationDispatch({ type: 'CLEAR' })
-    //   }, 5000)
-    //   return
-    // }
+    if (content.length < 5) {
+      notificationDispatch({ type: 'MESSAGE', payload: 'La anecdota debe tener al menos 5 caracteres de longitud' })
+      setTimeout(() => {
+        notificationDispatch({ type: 'CLEAR' })
+      }, 5000)
+      return
+    }
     try {
       newAnecdoteMutation.mutate({ content, votes: 0 })
       notificationDispatch({ type: 'MESSAGE', payload: `added ${content}` })
